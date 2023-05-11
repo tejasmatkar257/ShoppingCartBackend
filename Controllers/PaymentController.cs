@@ -23,13 +23,13 @@ namespace ShoppingCart_API.Controllers
             return Ok(_transactionServices.SaveTransaction(Payment));
         }
 
-        [HttpPost("DeleteTransaction")]
+        [HttpDelete("DeleteTransaction")]
         public IActionResult DeleteTransaction(int CartId)
         {
             return Ok(_transactionServices.DeleteTransaction(CartId));
         }
 
-        [HttpPost("UpdateTransaction")]
+        [HttpPut("UpdateTransaction")]
         public IActionResult UpdateTransaction(Payment transaction)
         {
             return Ok(_transactionServices.UpdateTransaction(transaction));
